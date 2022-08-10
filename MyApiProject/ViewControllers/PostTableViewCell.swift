@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyTableViewCell: UITableViewCell {
+class PostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var postDate: UILabel!

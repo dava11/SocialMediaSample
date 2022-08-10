@@ -8,7 +8,7 @@
 import Foundation
 
 
-class NetworkPost {
+class NetworkManager {
     
     
     func getAllPosts(completion: @escaping(Posts) -> Void) {
