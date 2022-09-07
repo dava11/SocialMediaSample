@@ -9,7 +9,7 @@ import UIKit
 
 class PostMainViewController: UIViewController {
 
-    @IBOutlet private weak var postTableView: UITableView!
+    @IBOutlet weak var postTableView: UITableView!
     private var postDataSource: [PostElement] = []
     private var network = NetworkManager()
     
@@ -46,7 +46,7 @@ extension PostMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = postTableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as? MyTableViewCell{
+        if let cell = postTableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as? PostTableViewCell {
             
             let post = postDataSource[indexPath.row]
             let date = Date(timeIntervalSince1970: TimeInterval(post.timestamp)).formatted(date: .abbreviated, time: .shortened)

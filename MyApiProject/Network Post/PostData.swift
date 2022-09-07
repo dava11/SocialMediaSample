@@ -13,13 +13,14 @@ struct Posts: Codable {
 
 // MARK: - PostElement
 struct PostElement: Codable {
-    let postID, timeshamp: Int
+    let postID, timestamp: Int
     let title, previewText: String
     let likesCount: Int
 
     enum CodingKeys: String, CodingKey {
         case postID = "postId"
-        case timeshamp, title
+        case timestamp = "timeshamp"
+        case title
         case previewText = "preview_text"
         case likesCount = "likes_count"
     }
